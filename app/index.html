@@ -16,9 +16,9 @@
     </div>
     <div class="container">
         <ol id="list">
-            <li v-for="opt in opts"><button v-on:click="refreshPage">{{ opt.text }}</button></li> 
+            <li v-for="opt in opts"><button v-on:click="refreshPage(opt.url)">{{ opt.text }}</button></li> 
         </ol>
-        <iframe id="displayOpt" src="NULL"></iframe>
+        <iframe id="displayOpt"></iframe> <!--用来显示每一个选项卡的内容-->
     </div>
 </body>
 <script type="text/javascript" src="./js/index.js"></script>
