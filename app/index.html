@@ -6,20 +6,25 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script type="text/javascript" src="./js/vue.js"></script>
+    <script type="text/javascript" src="./js/jquery-3.2.1.min.js"></script>
     <title id="title">{{ title }}</title>
-    
 </head>
-<body>
+<body style="background-color: black;">
     <div class="header">
         <input type="text" id="search-input"/>
-        <button type="button" id="search-btn"><img src="./img/search.png" alt="Search"/></button>
+        <button style="border: 0px; padding:0px; margin:0px" type="button" id="search-btn" onclick="startSearch(document.getElementById('search-input').value);">
+            <img src="./img/search.png" alt="Search"/>
+        </button>
     </div>
     <div class="container">
         <ol id="list">
-            <li v-for="opt in opts"><button v-on:click="refreshPage(opt.url)">{{ opt.text }}</button></li> 
+            <li v-for="opt in opts">
+                <button v-on:click="refreshPage(opt.url);changeTitle(opt.title)">{{ opt.text }}</button>
+            </li> 
         </ol>
-        <iframe id="displayOpt"></iframe> <!--用来显示每一个选项卡的内容-->
+        <iframe id="displayOpt" src="./htmls/search.html"></iframe> <!--用来显示每一个选项卡的内容-->
     </div>
 </body>
 <script type="text/javascript" src="./js/index.js"></script>
+<script type="module" src="./js/search.js"></script>
 </html>
