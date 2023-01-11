@@ -10,14 +10,14 @@
     "type": "git",
     "url": "git+https://github.com/Base-man525/concept-music-desktop.git"
   },
-  "author": "Base-man525<337752715@qq.com> & Ding-M55<1753534976@qq.com>",
+  "author": "Base-man525<337752715@qq.com> & Ding-M55<1753534976@qq.com> & BillyTancy<3461839072@qq.com>",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/Base-man525/concept-music-desktop/issues"
   },
   "homepage": "https://github.com/Base-man525/concept-music-desktop#readme",
   "dependencies": {
-    "electron": "^22.0.0",
-    "vue":"^2.x"
+    "electron": "^22.0.1",
+    "vue": "^2.x"
   }
 }
